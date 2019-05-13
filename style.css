@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "joystix";
+    src: url("joystix.ttf");
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #202020;
+}
+
+#tetris {
+    margin: 0 auto;
+    border: 3px #eee solid;
+}
+
+#score {
+    margin-bottom: 20px;
+    color: #eee;
+    font-family: 'joystix';
+    font-size: 3em;
+}
+
+h1 {
+    margin: 0;
+    color: #eee;
+    font-family: 'joystix';
+    font-size: 3em;
+}
