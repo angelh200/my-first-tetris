@@ -25,7 +25,7 @@ body {
     border: 3px #eee solid;
 }
 
-#score {
+#score, #max-score {
     margin-bottom: 20px;
     color: #eee;
     font-family: 'joystix';
@@ -36,5 +36,5 @@ h1 {
     margin: 0;
     color: #eee;
     font-family: 'joystix';
-    font-size: 3em;
+    font-size: 2em;
 }
