@@ -139,15 +139,18 @@ function playerMove(dir) {
 
 function playerReset() {
     const pieces = 'ILJOTSZ';
+    let finalScore = 0;
     player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
     player.pos.y = 0;
     player.pos.x = (arena[0].length / 2 | 0) - 
     (player.matrix[0].length / 2 | 0);
     if (collide(arena, player)) {
         arena.forEach(row => row.fill(0));
+        finalScore = player.score;
         player.score = 0;
         updateScore();
     }
+    updateMaxScore(finalScore);
 }
 
 function playerRotate(dir) {
