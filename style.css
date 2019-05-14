@@ -20,7 +20,7 @@ body {
     background-color: #202020;
 }
 
-#tetris {
+.tetris {
     margin: 0 auto;
     border: 3px #eee solid;
 }
