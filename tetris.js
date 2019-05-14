@@ -138,6 +138,7 @@ function playerMove(dir) {
 }
 
 function playerReset() {
+    sound.play();
     const pieces = 'ILJOTSZ';
     let finalScore = 0;
     player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
@@ -149,6 +150,7 @@ function playerReset() {
         finalScore = player.score;
         player.score = 0;
         updateScore();
+        sound.reset();
     }
     updateMaxScore(finalScore);
 }
@@ -223,11 +225,7 @@ const colors = [
 
 const arena = createMatrix(12, 20);
 
-const player = {
-    pos: {x: 0, y: 0},
-    matrix: null,
-    score: 0
-};
+const sound = new Sound('./jetpack.mp3');
 
 document.addEventListener('keydown', event => {
     if (event.keyCode === 37) {
