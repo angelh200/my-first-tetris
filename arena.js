@@ -13,8 +13,8 @@ class Arena {
 
     collide(player) {
         const [m, o] = [player.matrix, player.pos];
-        for (let y = 0; y < m.length; y++) {
-            for (let x = 0; x < m[y].length; x++) {
+        for (let y = 0; y < m.length; ++y) {
+            for (let x = 0; x < m[y].length; ++x) {
                 if (m[y][x] !== 0 &&
                     (this.matrix[y + o.y] &&
                         this.matrix[y + o.y][x + o.x]) !== 0) {
@@ -38,7 +38,7 @@ class Arena {
     sweep() {
         let rowCount = 1;
         let score = 0;
-        outer: for (let y = this.matrix.length - 1; y > 0; y--) {
+        outer: for (let y = this.matrix.length - 1; y > 0; --y) {
             for (let x = 0; x < this.matrix[y].length; ++x) {
                 if (this.matrix[y][x] === 0) {
                     continue outer;
@@ -47,7 +47,7 @@ class Arena {
 
             const row = this.matrix.splice(y, 1)[0].fill(0);
             this.matrix.unshift(row);
-            y++;
+            ++y;
 
             score += rowCount * 10;
             rowCount *= 2;

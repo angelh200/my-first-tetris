@@ -16,7 +16,7 @@ class Tetris {
             '#F538FF',
             '#FF8E0D',
             '#FFE138',
-            '#3877FF'
+            '#3877FF',
         ];
 
         let lastTime = 0;
@@ -58,5 +58,4 @@ class Tetris {
     updateScore(score) {
         this.element.querySelector('.score').innerText = score;
     }
-
 }
